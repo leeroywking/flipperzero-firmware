@@ -179,23 +179,16 @@ TextReader* text_reader_alloc() {
     view_dispatcher_add_view(instance->view_dispatcher, TextReaderViewSubmenu, view);
     submenu_add_item(
         instance->submenu,
-        "Select File",
+        "This isn't a real module",
         TextReaderViewTextReader,
         text_reader_submenu_callback,
         instance);
     submenu_add_item(
         instance->submenu,
-        "Resume Last file",
+        "Currently copy of display test",
         TextReaderViewConfigure,
         text_reader_submenu_callback,
         instance);
-    submenu_add_item(
-        instance->submenu,
-        "This isn't a real module I'm just making stuff up right now",
-        TextReaderViewConfigure,
-        text_reader_submenu_callback,
-        instance);
-
     return instance;
 }
 

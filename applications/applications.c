@@ -181,8 +181,9 @@ const FlipperApplication FLIPPER_APPS[] = {
     {.app = u2f_app, .name = "U2F", .stack_size = 2048, .icon = &A_U2F_14},
 #endif
 
+// A_TextReader_14
 #ifdef APP_TEXT_READER
-    {.app = text_reader_app, .name = "Text Reader", .stack_size = 1024, .icon = NULL},
+    {.app = text_reader_app, .name = "Text Reader", .stack_size = 1024, .icon = &A_U2F_14},
 #endif
 
 };
