@@ -44,6 +44,7 @@ extern int32_t vibro_test_app(void* p);
 extern int32_t bt_hid_app(void* p);
 extern int32_t battery_test_app(void* p);
 extern int32_t text_box_test_app(void* p);
+extern int32_t text_reader_app(void* p);
 
 // Plugins
 extern int32_t music_player_app(void* p);
@@ -178,6 +179,10 @@ const FlipperApplication FLIPPER_APPS[] = {
 
 #ifdef APP_U2F
     {.app = u2f_app, .name = "U2F", .stack_size = 2048, .icon = &A_U2F_14},
+#endif
+
+#ifdef APP_TEXT_READER
+    {.app = text_reader_app, .name = "Text Reader", .stack_size = 1024, .icon = NULL},
 #endif
 
 };
