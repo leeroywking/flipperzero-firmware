@@ -1,0 +1,32 @@
+
+
+make[1]: Entering directory '/project/firmware'
+.obj/f7-firmware CFLAGS ok
+
+	CC	 applications/applications.c
+	CC	 applications/subghz/subghz.c
+	CC	 applications/subghz/subghz_history.c
+	CC	 applications/subghz/helpers/subghz_testing.c
+	CC	 applications/subghz/helpers/subghz_chat.c
+	CC	 applications/subghz/helpers/subghz_frequency_analyzer_worker.c
+	CC	 applications/subghz/subghz_setting.c
+	CC	 applications/subghz/subghz_i.c
+	CC	 applications/subghz/subghz_cli.c
+	CC	 applications/subghz/scenes/subghz_scene_start.c
+	CC	 applications/subghz/scenes/subghz_scene_test_packet.c
+	CC	 applications/subghz/scenes/subghz_scene_need_saving.c
+	CC	 applications/subghz/scenes/subghz_scene_set_type.c
+	CC	 applications/subghz/scenes/subghz_scene_show_only_rx.c
+	CC	 applications/subghz/scenes/subghz_scene_test_carrier.c
+	CC	 applications/subghz/scenes/subghz_scene_receiver_config.c
+	CC	 applications/subghz/scenes/subghz_scene_transmitter.c
+	CC	 applications/subghz/scenes/subghz_scene_save_success.c
+	CC	 applications/subghz/scenes/subghz_scene_test_static.c
+	CC	 applications/subghz/scenes/subghz_scene_frequency_analyzer.c
+make[1]: Leaving directory '/project/firmware'
+/project/applications/applications.c:185:82: error: 'A_TextReader_14' undeclared here (not in a function)
+  185 |     {.app = text_reader_app, .name = "Text Reader", .stack_size = 1024, .icon = &A_TextReader_14},
+      |                                                                                  ^~~~~~~~~~~~~~~
+make[1]: *** [/project/make/rules.mk:71: .obj/f7-firmware//project/applications/applications.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:68: firmware_all] Error 2
